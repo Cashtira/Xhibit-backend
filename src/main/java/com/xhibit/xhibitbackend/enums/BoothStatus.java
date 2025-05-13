@@ -1,4 +1,4 @@
-package com.xhibit.xhibitbackend.entity;
+package com.xhibit.xhibitbackend.enums;
 
 public enum BoothStatus
 {

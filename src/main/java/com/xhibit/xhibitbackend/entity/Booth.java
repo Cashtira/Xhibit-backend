@@ -1,10 +1,8 @@
 package com.xhibit.xhibitbackend.entity;
 
+import com.xhibit.xhibitbackend.enums.BoothStatus;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.UUID;
 
@@ -13,6 +11,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 @Table(name = "booths")
 public class Booth {
     @Id
@@ -30,5 +29,5 @@ public class Booth {
     private double price;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private BoothStatus status = BoothStatus.Available;
+    private BoothStatus status;
 }
